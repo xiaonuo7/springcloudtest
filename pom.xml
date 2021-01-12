@@ -8,14 +8,7 @@
     <artifactId>pe-cloud-demo-parent</artifactId>
     <version>1.0.0</version>
     <modules>
-        <module>pe-cloud-config</module>
         <module>pe-cloud-eureka</module>
-        <module>pe-cloud-gateway</module>
-        <module>pe-cloud-service</module>
-        <module>pe-cloud-gatewayext</module>
-        <module>pe-cloud-mq</module>
-        <module>pe-cloud-bus-amqp</module>
-        <module>pe-cloud-stream</module>
     </modules>
     <packaging>pom</packaging>
 
