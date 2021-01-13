@@ -1,0 +1,2 @@
+用消息总线来刷新config配置中心的数据的时候，若消息总线用了springcloudsecurity，那么bus-refresh的时候会刷新失败，要去掉
+而原来的springcloudconfig可以直接使用springcloudsecurity，调用具体service的refresh刷新没有问题

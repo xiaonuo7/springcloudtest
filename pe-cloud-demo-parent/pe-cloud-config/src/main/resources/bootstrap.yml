@@ -1,0 +1,29 @@
+server:
+  port: 8001
+
+spring:
+   application:
+      name: pe-cloud-config # 应用名称
+   cloud:
+      config:
+         server:
+            git:
+               uri: https://github.com/xiaonuo7/configcenter #配置文件所在仓库
+               username: xiaonuo_7@163.com #登录账号
+               password: xiaonuo_7 #登录密码
+               default-label: main #配置文件分支
+               search-paths: '{application}' #配置文件所在根目录
+   security:
+      user: #配置security用户名密码，默认值为“user”的用户名和随机生成的密码
+         name: user
+         password: user
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: ${ESUREKA_SERVICE_URL:http://localhost:8761}/eureka/

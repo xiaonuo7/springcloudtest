@@ -1,0 +1,11 @@
+server:
+  port: 8080
+
+spring:
+   application:
+      name: pe-cloud-xxljob # 应用名称
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: ${ESUREKA_SERVICE_URL:http://localhost:8761}/eureka/

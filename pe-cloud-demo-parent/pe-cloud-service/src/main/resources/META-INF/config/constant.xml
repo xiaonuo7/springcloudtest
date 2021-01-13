@@ -1,0 +1,20 @@
+<spring:beans xmlns:spring="http://www.springframework.org/schema/beans"
+	xmlns="http://www.csii.com.cn/schema/pe" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       					   http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd
+       					   http://www.csii.com.cn/schema/pe	http://www.csii.com.cn/schema/pe/pe-1.0.xsd">
+
+<config>
+<sharedMap id="constantsMap">
+	<map name="sourceMap">
+	<!-- 客户状态 -->
+	<list name="CifState" >
+		<param >0</param>
+		<param >1</param>
+	</list>
+	<!-- 其他服务 add by Hydra  end  -->
+</map>
+</sharedMap>
+</config>
+</spring:beans>

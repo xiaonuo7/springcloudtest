@@ -1,0 +1,35 @@
+server:
+   port: 8006
+spring:
+   application:
+      name: pe-cloud-stream # 应用名称
+   cloud:
+      stream:
+#      instanceCount: 2  #消费者总数
+#      instanceIndex: 0  #当前消费者的索引
+         bindings:
+            input: #内置的获取消息的通道 , 从topcheer-default中获取消息
+               destination: topcheer-default
+            myInput:
+               destination: topcheer-custom-output
+#          group: group1
+#          consumer:
+#            partitioned: true  #开启分区支持
+         binders:
+            defaultRabbit:
+               type: rabbit
+   rabbitmq:
+      host: localhost
+      port: 5672
+      username: admin
+      password: admin
+management:
+   endpoints:
+      web:
+         exposure:
+            include: '*'
+eureka:
+   client:
+      registryFetchIntervalSeconds: 5
+      service-url:
+         defaultZone: ${ESUREKA_SERVICE_URL:http://localhost:8761}/eureka/

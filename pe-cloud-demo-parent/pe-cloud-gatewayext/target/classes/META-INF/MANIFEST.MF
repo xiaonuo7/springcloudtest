@@ -1,0 +1,108 @@
+Manifest-Version: 1.0
+Built-By: edward
+Class-Path: lib/spring-web-5.1.8.RELEASE.jar lib/spring-beans-5.1.8.RE
+ LEASE.jar lib/spring-core-5.1.8.RELEASE.jar lib/spring-jcl-5.1.8.RELE
+ ASE.jar lib/spring-boot-autoconfigure-2.1.6.RELEASE.jar lib/spring-bo
+ ot-2.1.6.RELEASE.jar lib/spring-context-5.1.8.RELEASE.jar lib/spring-
+ expression-5.1.8.RELEASE.jar lib/spring-cloud-starter-config-2.1.3.RE
+ LEASE.jar lib/spring-cloud-starter-2.1.2.RELEASE.jar lib/spring-secur
+ ity-rsa-1.0.7.RELEASE.jar lib/bcpkix-jdk15on-1.60.jar lib/jackson-dat
+ abind-2.9.9.jar lib/spring-cloud-config-client-2.1.3.RELEASE.jar lib/
+ spring-cloud-commons-2.1.2.RELEASE.jar lib/spring-security-crypto-5.1
+ .5.RELEASE.jar lib/spring-cloud-context-2.1.2.RELEASE.jar lib/jackson
+ -annotations-2.9.0.jar lib/spring-cloud-starter-gateway-2.1.2.RELEASE
+ .jar lib/spring-cloud-gateway-core-2.1.2.RELEASE.jar lib/reactor-extr
+ a-3.2.3.RELEASE.jar lib/spring-boot-starter-webflux-2.1.6.RELEASE.jar
+  lib/spring-boot-starter-json-2.1.6.RELEASE.jar lib/jackson-datatype-
+ jdk8-2.9.9.jar lib/jackson-module-parameter-names-2.9.9.jar lib/sprin
+ g-boot-starter-reactor-netty-2.1.6.RELEASE.jar lib/reactor-netty-0.8.
+ 9.RELEASE.jar lib/netty-codec-http-4.1.36.Final.jar lib/netty-codec-h
+ ttp2-4.1.36.Final.jar lib/netty-handler-proxy-4.1.36.Final.jar lib/ne
+ tty-codec-socks-4.1.36.Final.jar lib/netty-transport-native-epoll-4.1
+ .36.Final-linux-x86_64.jar lib/netty-transport-native-unix-common-4.1
+ .36.Final.jar lib/javax.el-3.0.0.jar lib/hibernate-validator-6.0.17.F
+ inal.jar lib/validation-api-2.0.1.Final.jar lib/jboss-logging-3.3.2.F
+ inal.jar lib/classmate-1.4.0.jar lib/spring-webflux-5.1.8.RELEASE.jar
+  lib/nio-multipart-parser-1.1.0.jar lib/nio-stream-storage-1.1.3.jar 
+ lib/spring-boot-starter-data-redis-reactive-2.1.6.RELEASE.jar lib/spr
+ ing-boot-starter-data-redis-2.1.6.RELEASE.jar lib/spring-boot-starter
+ -2.1.6.RELEASE.jar lib/spring-boot-starter-logging-2.1.6.RELEASE.jar 
+ lib/logback-classic-1.2.3.jar lib/logback-core-1.2.3.jar lib/log4j-to
+ -slf4j-2.11.2.jar lib/log4j-api-2.11.2.jar lib/jul-to-slf4j-1.7.26.ja
+ r lib/javax.annotation-api-1.3.2.jar lib/snakeyaml-1.23.jar lib/sprin
+ g-data-redis-2.1.9.RELEASE.jar lib/spring-data-keyvalue-2.1.9.RELEASE
+ .jar lib/spring-data-commons-2.1.9.RELEASE.jar lib/spring-tx-5.1.8.RE
+ LEASE.jar lib/spring-oxm-5.1.8.RELEASE.jar lib/spring-aop-5.1.8.RELEA
+ SE.jar lib/spring-context-support-5.1.8.RELEASE.jar lib/lettuce-core-
+ 5.1.7.RELEASE.jar lib/netty-common-4.1.36.Final.jar lib/netty-handler
+ -4.1.36.Final.jar lib/netty-buffer-4.1.36.Final.jar lib/netty-codec-4
+ .1.36.Final.jar lib/netty-transport-4.1.36.Final.jar lib/netty-resolv
+ er-4.1.36.Final.jar lib/reactor-core-3.2.10.RELEASE.jar lib/spring-bo
+ ot-starter-actuator-2.1.6.RELEASE.jar lib/spring-boot-actuator-autoco
+ nfigure-2.1.6.RELEASE.jar lib/spring-boot-actuator-2.1.6.RELEASE.jar 
+ lib/jackson-datatype-jsr310-2.9.9.jar lib/micrometer-core-1.1.5.jar l
+ ib/HdrHistogram-2.1.9.jar lib/LatencyUtils-2.0.3.jar lib/spring-cloud
+ -starter-netflix-eureka-client-2.1.2.RELEASE.jar lib/spring-cloud-net
+ flix-hystrix-2.1.2.RELEASE.jar lib/spring-boot-starter-aop-2.1.6.RELE
+ ASE.jar lib/spring-cloud-netflix-eureka-client-2.1.2.RELEASE.jar lib/
+ eureka-client-1.9.12.jar lib/jettison-1.3.7.jar lib/stax-api-1.0.1.ja
+ r lib/netflix-eventbus-0.3.0.jar lib/netflix-infix-0.3.0.jar lib/comm
+ ons-jxpath-1.3.jar lib/joda-time-2.10.2.jar lib/antlr-runtime-3.4.jar
+  lib/stringtemplate-3.2.1.jar lib/antlr-2.7.7.jar lib/gson-2.8.5.jar 
+ lib/commons-math-2.2.jar lib/archaius-core-0.7.6.jar lib/jsr311-api-1
+ .1.1.jar lib/servo-core-0.12.21.jar lib/jersey-core-1.19.1.jar lib/je
+ rsey-client-1.19.1.jar lib/jersey-apache-client4-1.19.1.jar lib/httpc
+ lient-4.5.9.jar lib/httpcore-4.4.11.jar lib/guice-4.1.0.jar lib/javax
+ .inject-1.jar lib/aopalliance-1.0.jar lib/compactmap-1.2.1.jar lib/de
+ xx-collections-0.2.jar lib/eureka-core-1.9.12.jar lib/woodstox-core-5
+ .0.3.jar lib/stax2-api-3.1.4.jar lib/spring-cloud-starter-netflix-arc
+ haius-2.1.2.RELEASE.jar lib/spring-cloud-netflix-archaius-2.1.2.RELEA
+ SE.jar lib/commons-configuration-1.8.jar lib/commons-lang-2.6.jar lib
+ /spring-cloud-starter-netflix-ribbon-2.1.2.RELEASE.jar lib/ribbon-2.3
+ .0.jar lib/ribbon-transport-2.3.0.jar lib/rxnetty-contexts-0.4.9.jar 
+ lib/rxnetty-servo-0.4.9.jar lib/rxnetty-0.4.9.jar lib/ribbon-core-2.3
+ .0.jar lib/ribbon-httpclient-2.3.0.jar lib/commons-collections-3.2.2.
+ jar lib/netflix-commons-util-0.3.0.jar lib/ribbon-loadbalancer-2.3.0.
+ jar lib/netflix-statistics-0.1.1.jar lib/rxjava-1.2.0.jar lib/ribbon-
+ eureka-2.3.0.jar lib/xstream-1.4.10.jar lib/xmlpull-1.1.3.1.jar lib/x
+ pp3_min-1.1.4c.jar lib/spring-cloud-starter-netflix-hystrix-2.1.2.REL
+ EASE.jar lib/spring-cloud-netflix-ribbon-2.1.2.RELEASE.jar lib/hystri
+ x-core-1.5.18.jar lib/hystrix-serialization-1.5.18.jar lib/jackson-mo
+ dule-afterburner-2.9.9.jar lib/hystrix-metrics-event-stream-1.5.18.ja
+ r lib/hystrix-javanica-1.5.18.jar lib/commons-lang3-3.8.1.jar lib/asm
+ -5.0.4.jar lib/aspectjweaver-1.9.4.jar lib/guava-20.0.jar lib/rxjava-
+ reactive-streams-1.2.1.jar lib/reactive-streams-1.0.2.jar lib/spring-
+ session-data-redis-2.1.7.RELEASE.jar lib/spring-session-core-2.1.7.RE
+ LEASE.jar lib/commons-pool2-2.6.2.jar lib/lombok-1.18.8.jar lib/pe-ht
+ tp-10.1.1.2.jar lib/jackson-core-2.9.9.jar lib/poi-3.16.jar lib/commo
+ ns-codec-1.11.jar lib/commons-collections4-4.1.jar lib/javax.servlet.
+ jsp.jstl-api-1.2.1.jar lib/jsp-api-6.0.26.jar lib/el-api-6.0.26.jar l
+ ib/standard-1.1.2.jar lib/pe-http-extend-10.1.1.1.jar lib/pe-core-10.
+ 1.1.4.jar lib/jcl-over-slf4j-1.7.26.jar lib/spring-orm-5.1.8.RELEASE.
+ jar lib/spring-jdbc-5.1.8.RELEASE.jar lib/commons-dbcp-1.4.jar lib/co
+ mmons-pool-1.6.jar lib/servlet-api-2.5.jar lib/slf4j-api-1.7.26.jar l
+ ib/ognl-2.6.5.jar lib/pe-spring-ibatis-10.1.1.1.jar lib/ibatis-sqlmap
+ -2.3.4.726.jar lib/cglib-nodep-3.2.5.jar lib/javassist-3.18.2-GA.jar 
+ lib/pe-core-extend-10.1.1.1.jar lib/pe-config-10.1.1.1.jar lib/pe-ibs
+ -10.1.1.1.jar lib/pe-service-core-10.1.1.3.jar lib/pe-transform-xml-1
+ 0.1.1.2.jar lib/pe-report-api-10.1.1.1.jar lib/pe-security-10.1.1.1.j
+ ar lib/bcmail-jdk15on-1.54.jar lib/bcprov-jdk15on-1.54.jar lib/pe-uti
+ ls-10.1.1.2.jar lib/pe-rule-10.1.1.1.jar lib/pe-uibs-10.1.1.1.jar lib
+ /netsignapi-1.0.jar lib/pe-transform-core-10.1.1.1.jar lib/pe-service
+ -automation-10.1.1.1.jar lib/pe-security-otp-10.1.1.1.jar lib/pe-adap
+ ter-10.1.1.2.jar lib/commons-fileupload-1.3.1.jar lib/commons-io-2.2.
+ jar lib/fastjson-1.2.41.jar lib/mybatis-spring-boot-starter-1.3.0.jar
+  lib/spring-boot-starter-jdbc-2.1.6.RELEASE.jar lib/HikariCP-3.2.0.ja
+ r lib/mybatis-spring-boot-autoconfigure-1.3.0.jar lib/mybatis-3.4.4.j
+ ar lib/mybatis-spring-1.3.2.jar lib/pe-ibatis-mybatis-bridge-10.1.1.j
+ ar lib/pe-mybatis-10.1.1.1.jar lib/mybatis-typehandlers-jsr310-1.0.2.
+ jar lib/pagehelper-5.1.2.jar lib/jsqlparser-1.0.jar lib/mybatis-ehcac
+ he-1.1.0.jar lib/ehcache-core-2.6.11.jar lib/druid-1.1.9.jar lib/ojdb
+ c6-11.2.0.4.jar lib/ucp-11.2.0.4.jar lib/oraclepki-11.2.0.4.jar lib/o
+ sdt_cert-11.2.0.4.jar lib/osdt_core-11.2.0.4.jar lib/simplefan-11.2.0
+ .4.jar lib/ons-11.2.0.4.jar lib/jedis-2.9.3.jar lib/jjwt-0.6.0.jar
+version: 1.0.0
+Build-Jdk: 1.8.0_40
+Created-By: Maven Integration for Eclipse
+Main-Class: com.csii.pe.eureka.EurekaServerApplication
+

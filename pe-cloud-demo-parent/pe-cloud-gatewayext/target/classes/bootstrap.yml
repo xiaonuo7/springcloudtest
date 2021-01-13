@@ -1,0 +1,80 @@
+server:
+   port: 8003
+spring:
+   session:
+      store-type: redis
+   application:
+      name: spring-cloud-gateway # 应用名称
+   redis:
+      host: localhost
+      port: 6379
+   cloud:
+      config:
+         username: user
+         password: user
+         enabled: true # 通过服务发现的方式去找配置中心
+         discovery:
+            enabled: true # 通过服务发现的方式去找配置中心
+            service-id: pe-cloud-config # 配置中心的名字，直接配置名称可以在配置中心集群的时候实现负载均衡
+         profile: dev # 对应配置中心文件的${profile}部分
+      gateway:
+         routes:
+         -  id: pe-cloud-service
+            uri: lb://pe-cloud-service
+            predicates:
+            - Path=/gateway/**
+            filters:
+            - StripPrefix=1
+            - name: Retry
+              args:
+                 retries: 3
+                 series:
+                  - SERVER_ERROR
+                  - CLIENT_ERROR
+                 methods:
+                  - GET
+                  - POST
+                 exceptions:
+                  - java.io.IOException
+                  - java.util.concurrent.TimeoutException
+            -  name: RateLimiter
+            -  name: Hystrix
+               args:
+                  name: appHystrix
+                  fallbackUri: forward:/fallback/gatewayFallback
+# hystrix设置隔离策略为信号量，超时时间为2秒
+hystrix:
+   command:
+      default:
+         execution:
+            isolation:
+               strategy: SEMAPHORE
+               thread:
+                  timeoutInMilliseconds: 5000
+         circuitBreaker:
+            #forceOpen: true
+#在当20秒的时间内，最近50次调用请求，请求错误率超过60%，则触发熔断10秒，期间快速失败。
+            requestVolumeThreshold: 50
+            errorThresholdPercentage: 60
+            sleepWindowInMilliseconds: 10000
+         metrics:
+            rollingStats:
+               timeInMilliseconds: 20000
+management:  #actuator
+  endpoints:
+    web:
+#      base-path: /aaa #默认是/actuator 前缀，可以在这里修改
+      exposure:
+        include: refresh  #打开全部请求端点
+#        include: refresh,health,info #打开部分
+eureka:
+   instance:
+      leaseRenewalIntervalInSeconds: 10
+      health-check-url-path: /actuator/health
+   client:
+      registryFetchIntervalSeconds: 5
+      service-url:
+         defaultZone: ${ESUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+pe-cloud-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.csii.pe.gateway.common.CustomBalanceRule

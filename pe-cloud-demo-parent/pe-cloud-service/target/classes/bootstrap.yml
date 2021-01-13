@@ -1,0 +1,79 @@
+server:
+   port: 8082
+spring:
+   application:
+      name: pe-cloud-service
+   cloud:
+      config:
+#username: user
+#password: user
+         enabled: true # 通过服务发现的方式去找配置中心
+         discovery:
+            enabled: true # 通过服务发现的方式去找配置中心
+            service-id: pe-cloud-busamqp # 配置中心的名字，直接配置名称可以在配置中心集群的时候实现负载均衡
+         profile: dev # 对应配置中心文件的${profile}部分
+      stream:
+         bindings:
+            output:
+               destination: topcheer-default #指定消息发送的目的地,在rabbitmq中,发送到一个topcheer-default的exchange中
+            myOutput:
+               destination: topcheer-custom-output
+#          producer:
+#            partition-key-expression: payload  #分区关键字   对象中的id,对象
+#            partition-count: 2  #分区大小
+         binders: #配置绑定器
+            defaultRabbit:
+               type: rabbit
+management: #actuator
+   endpoints:
+      web:
+#      base-path: /aaa #默认是/actuator 前缀，可以在这里修改
+         exposure:
+            include: refresh #打开全部请求端点
+#        include: refresh,health,info #打开部分
+eureka:
+   client:
+      registryFetchIntervalSeconds: 30
+      service-url:
+         defaultZone: ${ESUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+   instance:
+      lease-expiration-duration-in-seconds: 20
+      lease-renewal-interval-in-secodes: 5
+      metadata-map:
+         version: 1
+redis:
+   database: 0
+   cluster:
+      nodes:
+      - 10.217.17.70:7000
+# 集群设置 begin
+      - 10.217.17.74:7000
+      - 10.217.17.75:7000
+      max-redirects: 3 # 获取失败 最大重定向次数
+   lettuce:
+      pool:
+         max-wait: 100000
+#集群设置 end
+#单节点 begin
+#    host: 10.217.17.74
+#    port: 7000
+#单节点 end
+         max-idle: 10
+         max-active: 100
+   timeout: 5000
+logging:
+   config: classpath:logback-spring.xml
+   path: D:/logs
+   file: service
+xxl:
+   job:
+      executor:
+         logpath: /home/jobhandler
+         appname: yurun-job
+         port: 9999
+         logretentiondays: 10
+         ip: null
+      admin:
+         addresses: pe-cloud-xxljob
+# 调度中心 eureka服务
+      accessToken: null

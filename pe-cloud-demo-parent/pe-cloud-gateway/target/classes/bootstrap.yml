@@ -1,0 +1,44 @@
+spring:
+   application:
+      name: pe-cloud-gateway
+   cloud:
+      config:
+         username: user
+         password: user
+         enabled: true # 通过服务发现的方式去找配置中心
+         discovery:
+            enabled: true # 通过服务发现的方式去找配置中心
+            service-id: pe-cloud-config # 配置中心的名字，直接配置名称可以在配置中心集群的时候实现负载均衡
+         profile: dev # 对应配置中心文件的${profile}部分
+      gateway:
+         routes:
+         -  id: pe-cloud-server
+            uri: lb://pe-cloud-server
+            predicates:
+            - Method=GET,POST
+            - Path=/gateway/**
+            filters:
+            - StripPrefix=1
+            -  name: RequestRateLimiter
+               args:
+                  key-resolver: '#{@userKeyResolver}'
+                  redis-rate-limiter.replenishRate: 1
+                  redis-rate-limiter.burstCapacity: 1
+eureka:
+   instance:
+      leaseRenewalIntervalInSeconds: 10
+      health-check-url-path: /actuator/health
+   client:
+      registryFetchIntervalSeconds: 5
+      service-url:
+         defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+server:
+   port: 8081
+management:
+   endpoints:
+      web:
+         exposure:
+            include: '*'
+   endpoint:
+      health:
+         show-details: ALWAYS
